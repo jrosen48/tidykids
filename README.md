@@ -58,8 +58,7 @@ tidykids
 ```
 
 To see descriptions of the variables (also available
-[here](https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx)),
-type `tidykids_data_dictionary`
+[here](https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx)):
 
 ``` r
 tidykids_data_dictionary
