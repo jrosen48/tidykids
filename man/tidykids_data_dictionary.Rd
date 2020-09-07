@@ -3,7 +3,7 @@
 \docType{data}
 \name{tidykids_data_dictionary}
 \alias{tidykids_data_dictionary}
-\title{State-by-State Spending on Kids Dataset}
+\title{Data Dictionary for State-by-State Spending on Kids Dataset}
 \format{
 A tibble with 69 rows and 5 variables:
 \describe{
