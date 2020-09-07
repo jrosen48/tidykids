@@ -8,6 +8,8 @@ data_dictionary <- function() {
 
     dict <- janitor::clean_names(dict)
 
+    dict <- dplyr::rename(dict, variable = variable_name)
+
     dict
 
 }
