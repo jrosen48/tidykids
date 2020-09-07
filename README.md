@@ -36,21 +36,27 @@ Then, type `tidykids` to load the data:
 
 ``` r
 tidykids
-#> # A tibble: 70,380 x 4
-#>    state                variable year     value
-#>    <chr>                <chr>    <chr>    <dbl>
-#>  1 Alabama              PK12ed   1997   3271969
-#>  2 Alaska               PK12ed   1997   1042311
-#>  3 Arizona              PK12ed   1997   3388165
-#>  4 Arkansas             PK12ed   1997   1960613
-#>  5 California           PK12ed   1997  28708364
-#>  6 Colorado             PK12ed   1997   3332994
-#>  7 Connecticut          PK12ed   1997   4014870
-#>  8 Delaware             PK12ed   1997    776825
-#>  9 District of Columbia PK12ed   1997    544051
-#> 10 Florida              PK12ed   1997  11498394
-#> # … with 70,370 more rows
+#> # A tibble: 23,460 x 6
+#>    state                variable year       raw   inf_adj inf_adj_perchild
+#>    <chr>                <chr>    <chr>    <dbl>     <dbl>            <dbl>
+#>  1 Alabama              PK12ed   1997   3271969  4665308.             3.93
+#>  2 Alaska               PK12ed   1997   1042311  1486170              7.55
+#>  3 Arizona              PK12ed   1997   3388165  4830986.             3.71
+#>  4 Arkansas             PK12ed   1997   1960613  2795523              3.89
+#>  5 California           PK12ed   1997  28708364 40933568              4.28
+#>  6 Colorado             PK12ed   1997   3332994  4752320.             4.38
+#>  7 Connecticut          PK12ed   1997   4014870  5724568.             6.70
+#>  8 Delaware             PK12ed   1997    776825  1107629.             5.63
+#>  9 District of Columbia PK12ed   1997    544051   775730.             6.11
+#> 10 Florida              PK12ed   1997  11498394 16394885              4.45
+#> # … with 23,450 more rows
 ```
+
+  - `raw` refers to the raw amount
+  - `inf_adj` refers to the amount transformed to be in 2016 dollars for
+    each year
+  - `inf_adj_per_child` refers to the amount transformed to be in 2016
+    dollars for each year per child
 
 To see descriptions of the variables (also available
 [here](https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx)):
@@ -58,18 +64,18 @@ To see descriptions of the variables (also available
 ``` r
 tidykids_data_dictionary
 #> # A tibble: 69 x 5
-#>    variable        variable   measurement_unit allowed_values description       
-#>    <chr>           <chr>      <chr>            <chr>          <chr>             
-#>  1 Elementary and… PK12ed     Numeric          0-             Public spending o…
-#>  2 Elementary and… PK12ed_re… Numeric          0-             Public spending o…
-#>  3 Elementary and… PK12ed_re… Numeric          0-             Public spending o…
-#>  4 Higher educati… highered   Numeric          0-             Public spending o…
-#>  5 Higher educati… highered_… Numeric          0-             Public spending o…
-#>  6 Higher educati… highered_… Numeric          0-             Public spending o…
-#>  7 Education subs… edsubs     Numeric          0-             Public spending o…
-#>  8 Education subs… edsubs_re… Numeric          0-             Public spending o…
-#>  9 Education subs… edsubs_re… Numeric          0-             Public spending o…
-#> 10 Education serv… edservs    Numeric          0-             Public spending o…
+#>    variable_category    variable measurement_unit allowed_values description    
+#>    <chr>                <chr>    <chr>            <chr>          <chr>          
+#>  1 Elementary and seco… PK12ed   Numeric          0-             Public spendin…
+#>  2 Elementary and seco… PK12ed_… Numeric          0-             Public spendin…
+#>  3 Elementary and seco… PK12ed_… Numeric          0-             Public spendin…
+#>  4 Higher education ex… highered Numeric          0-             Public spendin…
+#>  5 Higher education ex… highere… Numeric          0-             Public spendin…
+#>  6 Higher education ex… highere… Numeric          0-             Public spendin…
+#>  7 Education subsidies… edsubs   Numeric          0-             Public spendin…
+#>  8 Education subsidies… edsubs_… Numeric          0-             Public spendin…
+#>  9 Education subsidies… edsubs_… Numeric          0-             Public spendin…
+#> 10 Education services … edservs  Numeric          0-             Public spendin…
 #> # … with 59 more rows
 ```
 
@@ -85,9 +91,9 @@ library(dplyr, warn.conflicts = FALSE)
 library(ggplot2)
 
 tidykids %>% 
-  filter(variable %in% c("PK12ed_realperch"),
+  filter(variable %in% c("PK12ed"),
          state %in% c("Alabama", "Florida", "Georgia", "Mississippi", "North Carolina", "South Carolina", "Tennessee", "Virginia")) %>%
-  ggplot(aes(x = year, y = value, color = state, group = state)) +
+  ggplot(aes(x = year, y = inf_adj_perchild, color = state, group = state)) +
   geom_point() +
   geom_line() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +

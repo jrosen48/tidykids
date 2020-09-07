@@ -104,35 +104,43 @@
 <div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tidykids</span>)</pre></div>
 <p>Then, type <code>tidykids</code> to load the data:</p>
 <div class="sourceCode" id="cb3"><pre class="r"><span class="no">tidykids</span>
-<span class="co">#&gt; # A tibble: 70,380 x 4</span>
-<span class="co">#&gt;    state                variable year     value</span>
-<span class="co">#&gt;    &lt;chr&gt;                &lt;chr&gt;    &lt;chr&gt;    &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 Alabama              PK12ed   1997   3271969</span>
-<span class="co">#&gt;  2 Alaska               PK12ed   1997   1042311</span>
-<span class="co">#&gt;  3 Arizona              PK12ed   1997   3388165</span>
-<span class="co">#&gt;  4 Arkansas             PK12ed   1997   1960613</span>
-<span class="co">#&gt;  5 California           PK12ed   1997  28708364</span>
-<span class="co">#&gt;  6 Colorado             PK12ed   1997   3332994</span>
-<span class="co">#&gt;  7 Connecticut          PK12ed   1997   4014870</span>
-<span class="co">#&gt;  8 Delaware             PK12ed   1997    776825</span>
-<span class="co">#&gt;  9 District of Columbia PK12ed   1997    544051</span>
-<span class="co">#&gt; 10 Florida              PK12ed   1997  11498394</span>
-<span class="co">#&gt; # … with 70,370 more rows</span></pre></div>
+<span class="co">#&gt; # A tibble: 23,460 x 6</span>
+<span class="co">#&gt;    state                variable year       raw   inf_adj inf_adj_perchild</span>
+<span class="co">#&gt;    &lt;chr&gt;                &lt;chr&gt;    &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;            &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 Alabama              PK12ed   1997   3271969  4665308.             3.93</span>
+<span class="co">#&gt;  2 Alaska               PK12ed   1997   1042311  1486170              7.55</span>
+<span class="co">#&gt;  3 Arizona              PK12ed   1997   3388165  4830986.             3.71</span>
+<span class="co">#&gt;  4 Arkansas             PK12ed   1997   1960613  2795523              3.89</span>
+<span class="co">#&gt;  5 California           PK12ed   1997  28708364 40933568              4.28</span>
+<span class="co">#&gt;  6 Colorado             PK12ed   1997   3332994  4752320.             4.38</span>
+<span class="co">#&gt;  7 Connecticut          PK12ed   1997   4014870  5724568.             6.70</span>
+<span class="co">#&gt;  8 Delaware             PK12ed   1997    776825  1107629.             5.63</span>
+<span class="co">#&gt;  9 District of Columbia PK12ed   1997    544051   775730.             6.11</span>
+<span class="co">#&gt; 10 Florida              PK12ed   1997  11498394 16394885              4.45</span>
+<span class="co">#&gt; # … with 23,450 more rows</span></pre></div>
+<ul>
+<li>
+<code>raw</code> refers to the raw amount</li>
+<li>
+<code>inf_adj</code> refers to the amount transformed to be in 2016 dollars for each year</li>
+<li>
+<code>inf_adj_per_child</code> refers to the amount transformed to be in 2016 dollars for each year per child</li>
+</ul>
 <p>To see descriptions of the variables (also available <a href="https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx">here</a>):</p>
 <div class="sourceCode" id="cb4"><pre class="r"><span class="no">tidykids_data_dictionary</span>
 <span class="co">#&gt; # A tibble: 69 x 5</span>
-<span class="co">#&gt;    variable        variable   measurement_unit allowed_values description       </span>
-<span class="co">#&gt;    &lt;chr&gt;           &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;          &lt;chr&gt;             </span>
-<span class="co">#&gt;  1 Elementary and… PK12ed     Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  2 Elementary and… PK12ed_re… Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  3 Elementary and… PK12ed_re… Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  4 Higher educati… highered   Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  5 Higher educati… highered_… Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  6 Higher educati… highered_… Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  7 Education subs… edsubs     Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  8 Education subs… edsubs_re… Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  9 Education subs… edsubs_re… Numeric          0-             Public spending o…</span>
-<span class="co">#&gt; 10 Education serv… edservs    Numeric          0-             Public spending o…</span>
+<span class="co">#&gt;    variable_category    variable measurement_unit allowed_values description    </span>
+<span class="co">#&gt;    &lt;chr&gt;                &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;          &lt;chr&gt;          </span>
+<span class="co">#&gt;  1 Elementary and seco… PK12ed   Numeric          0-             Public spendin…</span>
+<span class="co">#&gt;  2 Elementary and seco… PK12ed_… Numeric          0-             Public spendin…</span>
+<span class="co">#&gt;  3 Elementary and seco… PK12ed_… Numeric          0-             Public spendin…</span>
+<span class="co">#&gt;  4 Higher education ex… highered Numeric          0-             Public spendin…</span>
+<span class="co">#&gt;  5 Higher education ex… highere… Numeric          0-             Public spendin…</span>
+<span class="co">#&gt;  6 Higher education ex… highere… Numeric          0-             Public spendin…</span>
+<span class="co">#&gt;  7 Education subsidies… edsubs   Numeric          0-             Public spendin…</span>
+<span class="co">#&gt;  8 Education subsidies… edsubs_… Numeric          0-             Public spendin…</span>
+<span class="co">#&gt;  9 Education subsidies… edsubs_… Numeric          0-             Public spendin…</span>
+<span class="co">#&gt; 10 Education services … edservs  Numeric          0-             Public spendin…</span>
 <span class="co">#&gt; # … with 59 more rows</span></pre></div>
 <p>These are also presented in an easily-readable format in the <a href="articles/tidykids-codebook.html">tidykids-codebook vignette</a>.</p>
 </div>
@@ -144,9 +152,9 @@
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
 
 <span class="no">tidykids</span> <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">variable</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"PK12ed_realperch"</span>),
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">variable</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"PK12ed"</span>),
          <span class="no">state</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Alabama"</span>, <span class="st">"Florida"</span>, <span class="st">"Georgia"</span>, <span class="st">"Mississippi"</span>, <span class="st">"North Carolina"</span>, <span class="st">"South Carolina"</span>, <span class="st">"Tennessee"</span>, <span class="st">"Virginia"</span>)) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">year</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">value</span>, <span class="kw">color</span> <span class="kw">=</span> <span class="no">state</span>, <span class="kw">group</span> <span class="kw">=</span> <span class="no">state</span>)) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">year</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">inf_adj_perchild</span>, <span class="kw">color</span> <span class="kw">=</span> <span class="no">state</span>, <span class="kw">group</span> <span class="kw">=</span> <span class="no">state</span>)) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>() +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>() +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span>(<span class="kw">axis.text.x</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span>(<span class="kw">angle</span> <span class="kw">=</span> <span class="fl">90</span>, <span class="kw">vjust</span> <span class="kw">=</span> <span class="fl">0.5</span>, <span class="kw">hjust</span><span class="kw">=</span><span class="fl">1</span>)) +
