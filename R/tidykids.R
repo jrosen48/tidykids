@@ -5,10 +5,9 @@
 #' @format A data frame with 70380 rows and 4 variables:
 #' \describe{
 #'   \item{state}{United States state (and the District of Columbia), a string}
-#'   \item{variable}{Variable; type tidykids_dictionary() in the console to see the descriptions, a string}
+#'   \item{variable}{Variable, see tidykids_data_dictionary for more information, a string}
 #'   \item{year}{year, an integer}
 #'   \item{value}{the value of the variable; a numeric value}
-#'   ...
 #' }
 #' @source \url{https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset}
 #' @import tibble

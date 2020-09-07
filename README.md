@@ -59,10 +59,10 @@ tidykids
 
 To see descriptions of the variables (also available
 [here](https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx)),
-use the following function:
+type `tidykids_data_dictionary`
 
 ``` r
-data_dictionary()
+tidykids_data_dictionary
 #> # A tibble: 69 x 5
 #>    variable        variable   measurement_unit allowed_values description       
 #>    <chr>           <chr>      <chr>            <chr>          <chr>             

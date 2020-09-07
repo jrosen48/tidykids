@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • tidykids</title>
+<title>State-by-State Spending on Kids Dataset — tidykids_data_dictionary • tidykids</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="State-by-State Spending on Kids Dataset — tidykids_data_dictionary" />
+<meta property="og:description" content="Data dictionary for the tidykids dataset, a dataset containing state-by-year data on spending on kids in the United States, 1997-2016. The data was made available by and is attributable to Julia Isaacs, Eleanor Lauderback, and Erica Greenberg at the Urban Institute under the under the ODC Attribution License (https://opendatacommons.org/licenses/by/1-0/)." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -105,48 +106,36 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>State-by-State Spending on Kids Dataset</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jrosen48/tidykids/blob/master/R/tidykids_dictionary.R'><code>R/tidykids_dictionary.R</code></a></small>
+    <div class="hidden name"><code>tidykids_data_dictionary.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Data dictionary for the tidykids dataset, a dataset containing state-by-year data on spending on kids in the United States, 1997-2016. The data was made available by and is attributable to Julia Isaacs, Eleanor Lauderback, and Erica Greenberg at the Urban Institute under the under the ODC Attribution License (https://opendatacommons.org/licenses/by/1-0/).</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='no'>tidykids_data_dictionary</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="tidykids.html">tidykids</a></code> </p>
-        </td>
-        <td><p>State-by-State Spending on Kids Dataset</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="tidykids_data_dictionary.html">tidykids_data_dictionary</a></code> </p>
-        </td>
-        <td><p>State-by-State Spending on Kids Dataset</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A tibble with 69 rows and 5 variables:</p><dl'>
+<dt>variable_category</dt><dd><p>Category for the variable, a string</p></dd>
+<dt>variable</dt><dd><p>Variable as it appears in the tidykids data; a string</p></dd>
+<dt>measurement_unit</dt><dd><p>type of variable, string</p></dd>
+<dt>allowed_values</dt><dd><p>the possible values of the variable, a string</p></dd>
+<dt>description</dt><dd><p>descriotion of the variable, a string</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset'>https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset</a></p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
