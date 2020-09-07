@@ -128,41 +128,41 @@
 </ul>
 <p>To see descriptions of the variables (also available <a href="https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx">here</a>):</p>
 <div class="sourceCode" id="cb4"><pre class="r"><span class="no">tidykids_data_dictionary</span>
-<span class="co">#&gt; # A tibble: 23 x 5</span>
-<span class="co">#&gt;    variable_category variable measurement_unit allowed_values description       </span>
-<span class="co">#&gt;    &lt;chr&gt;             &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;          &lt;chr&gt;             </span>
-<span class="co">#&gt;  1 PK12ed            PK12ed   Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  2 highered          highered Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  3 edsubs            edsubs   Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  4 edservs           edservs  Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  5 pell              pell     Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  6 HeadStartPriv     HeadSta… Numeric          0-             Federal spending …</span>
-<span class="co">#&gt;  7 TANFbasic         TANFbas… Numeric          -21820-        Public spending o…</span>
-<span class="co">#&gt;  8 othercashserv     otherca… Numeric          0-             Public spending o…</span>
-<span class="co">#&gt;  9 SNAP              SNAP     Numeric          0-             Public spending o…</span>
-<span class="co">#&gt; 10 socsec            socsec   Numeric          0-             Public spending o…</span>
+<span class="co">#&gt; # A tibble: 23 x 4</span>
+<span class="co">#&gt;    variable   measurement_unit allowed_values description                       </span>
+<span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;          &lt;chr&gt;                             </span>
+<span class="co">#&gt;  1 PK12ed     Numeric          0-             Public spending on elementary and…</span>
+<span class="co">#&gt;  2 highered   Numeric          0-             Public spending on higher educati…</span>
+<span class="co">#&gt;  3 edsubs     Numeric          0-             Public spending on education subs…</span>
+<span class="co">#&gt;  4 edservs    Numeric          0-             Public spending on education spec…</span>
+<span class="co">#&gt;  5 pell       Numeric          0-             Public spending on Pell Grants by…</span>
+<span class="co">#&gt;  6 HeadStart… Numeric          0-             Federal spending on Head Start aw…</span>
+<span class="co">#&gt;  7 TANFbasic  Numeric          -21820-        Public spending on TANF cash assi…</span>
+<span class="co">#&gt;  8 othercash… Numeric          0-             Public spending on other cash ass…</span>
+<span class="co">#&gt;  9 SNAP       Numeric          0-             Public spending on SNAP benefit p…</span>
+<span class="co">#&gt; 10 socsec     Numeric          0-             Public spending on Social Securit…</span>
 <span class="co">#&gt; # … with 13 more rows</span></pre></div>
-<p>This can be joined to the <code>tidykids</code> data to facilitate easily accessing information about the variables:</p>
+<p>This can be joined to the <code>tidykids</code> data to easily access information about the variables:</p>
 <div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>, <span class="kw">warn.conflicts</span> <span class="kw">=</span> <span class="fl">FALSE</span>)
 
 <span class="no">tidykids</span> <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">tidykids_data_dictionary</span>)
 <span class="co">#&gt; Joining, by = "variable"</span>
-<span class="co">#&gt; # A tibble: 23,460 x 10</span>
-<span class="co">#&gt;    state variable year     raw inf_adj inf_adj_perchild variable_catego…</span>
+<span class="co">#&gt; # A tibble: 23,460 x 9</span>
+<span class="co">#&gt;    state variable year     raw inf_adj inf_adj_perchild measurement_unit</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;dbl&gt;   &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;           </span>
-<span class="co">#&gt;  1 Alab… PK12ed   1997  3.27e6  4.67e6             3.93 PK12ed          </span>
-<span class="co">#&gt;  2 Alas… PK12ed   1997  1.04e6  1.49e6             7.55 PK12ed          </span>
-<span class="co">#&gt;  3 Ariz… PK12ed   1997  3.39e6  4.83e6             3.71 PK12ed          </span>
-<span class="co">#&gt;  4 Arka… PK12ed   1997  1.96e6  2.80e6             3.89 PK12ed          </span>
-<span class="co">#&gt;  5 Cali… PK12ed   1997  2.87e7  4.09e7             4.28 PK12ed          </span>
-<span class="co">#&gt;  6 Colo… PK12ed   1997  3.33e6  4.75e6             4.38 PK12ed          </span>
-<span class="co">#&gt;  7 Conn… PK12ed   1997  4.01e6  5.72e6             6.70 PK12ed          </span>
-<span class="co">#&gt;  8 Dela… PK12ed   1997  7.77e5  1.11e6             5.63 PK12ed          </span>
-<span class="co">#&gt;  9 Dist… PK12ed   1997  5.44e5  7.76e5             6.11 PK12ed          </span>
-<span class="co">#&gt; 10 Flor… PK12ed   1997  1.15e7  1.64e7             4.45 PK12ed          </span>
-<span class="co">#&gt; # … with 23,450 more rows, and 3 more variables: measurement_unit &lt;chr&gt;,</span>
-<span class="co">#&gt; #   allowed_values &lt;chr&gt;, description &lt;chr&gt;</span></pre></div>
+<span class="co">#&gt;  1 Alab… PK12ed   1997  3.27e6  4.67e6             3.93 Numeric         </span>
+<span class="co">#&gt;  2 Alas… PK12ed   1997  1.04e6  1.49e6             7.55 Numeric         </span>
+<span class="co">#&gt;  3 Ariz… PK12ed   1997  3.39e6  4.83e6             3.71 Numeric         </span>
+<span class="co">#&gt;  4 Arka… PK12ed   1997  1.96e6  2.80e6             3.89 Numeric         </span>
+<span class="co">#&gt;  5 Cali… PK12ed   1997  2.87e7  4.09e7             4.28 Numeric         </span>
+<span class="co">#&gt;  6 Colo… PK12ed   1997  3.33e6  4.75e6             4.38 Numeric         </span>
+<span class="co">#&gt;  7 Conn… PK12ed   1997  4.01e6  5.72e6             6.70 Numeric         </span>
+<span class="co">#&gt;  8 Dela… PK12ed   1997  7.77e5  1.11e6             5.63 Numeric         </span>
+<span class="co">#&gt;  9 Dist… PK12ed   1997  5.44e5  7.76e5             6.11 Numeric         </span>
+<span class="co">#&gt; 10 Flor… PK12ed   1997  1.15e7  1.64e7             4.45 Numeric         </span>
+<span class="co">#&gt; # … with 23,450 more rows, and 2 more variables: allowed_values &lt;chr&gt;,</span>
+<span class="co">#&gt; #   description &lt;chr&gt;</span></pre></div>
 <p>These are also presented in an easily-readable format in the <a href="articles/tidykids-codebook.html">tidykids-codebook vignette</a>.</p>
 </div>
 <div id="example" class="section level2">
@@ -189,7 +189,7 @@
 <div id="attribution" class="section level2">
 <h2 class="hasAnchor">
 <a href="#attribution" class="anchor"></a>Attribution</h2>
-<p>The data was made available by and is attributable to Julia Isaacs, Eleanor Lauderback, and Erica Greenberg under the under the ODC Attribution License (<a href="https://opendatacommons.org/licenses/by/1-0/" class="uri">https://opendatacommons.org/licenses/by/1-0/</a>).</p>
+<p>The data was made available by and is attributable to Julia Isaacs, Eleanor Lauderback, and Erica Greenberg under the under the <br><span class="math display"><em>O</em><em>D</em><em>C</em><em>A</em><em>t</em><em>t</em><em>r</em><em>i</em><em>b</em><em>u</em><em>t</em><em>i</em><em>o</em><em>n</em><em>L</em><em>i</em><em>c</em><em>e</em><em>n</em><em>s</em><em>e</em></span><br>(<a href="https://opendatacommons.org/licenses/by/1-0/" class="uri">https://opendatacommons.org/licenses/by/1-0/</a>.</p>
 </div>
 </div>
   </div>

@@ -63,24 +63,24 @@ To see descriptions of the variables (also available
 
 ``` r
 tidykids_data_dictionary
-#> # A tibble: 23 x 5
-#>    variable_category variable measurement_unit allowed_values description       
-#>    <chr>             <chr>    <chr>            <chr>          <chr>             
-#>  1 PK12ed            PK12ed   Numeric          0-             Public spending o…
-#>  2 highered          highered Numeric          0-             Public spending o…
-#>  3 edsubs            edsubs   Numeric          0-             Public spending o…
-#>  4 edservs           edservs  Numeric          0-             Public spending o…
-#>  5 pell              pell     Numeric          0-             Public spending o…
-#>  6 HeadStartPriv     HeadSta… Numeric          0-             Federal spending …
-#>  7 TANFbasic         TANFbas… Numeric          -21820-        Public spending o…
-#>  8 othercashserv     otherca… Numeric          0-             Public spending o…
-#>  9 SNAP              SNAP     Numeric          0-             Public spending o…
-#> 10 socsec            socsec   Numeric          0-             Public spending o…
+#> # A tibble: 23 x 4
+#>    variable   measurement_unit allowed_values description                       
+#>    <chr>      <chr>            <chr>          <chr>                             
+#>  1 PK12ed     Numeric          0-             Public spending on elementary and…
+#>  2 highered   Numeric          0-             Public spending on higher educati…
+#>  3 edsubs     Numeric          0-             Public spending on education subs…
+#>  4 edservs    Numeric          0-             Public spending on education spec…
+#>  5 pell       Numeric          0-             Public spending on Pell Grants by…
+#>  6 HeadStart… Numeric          0-             Federal spending on Head Start aw…
+#>  7 TANFbasic  Numeric          -21820-        Public spending on TANF cash assi…
+#>  8 othercash… Numeric          0-             Public spending on other cash ass…
+#>  9 SNAP       Numeric          0-             Public spending on SNAP benefit p…
+#> 10 socsec     Numeric          0-             Public spending on Social Securit…
 #> # … with 13 more rows
 ```
 
-This can be joined to the `tidykids` data to facilitate easily accessing
-information about the variables:
+This can be joined to the `tidykids` data to easily access information
+about the variables:
 
 ``` r
 library(dplyr, warn.conflicts = FALSE)
@@ -88,21 +88,21 @@ library(dplyr, warn.conflicts = FALSE)
 tidykids %>% 
   left_join(tidykids_data_dictionary)
 #> Joining, by = "variable"
-#> # A tibble: 23,460 x 10
-#>    state variable year     raw inf_adj inf_adj_perchild variable_catego…
+#> # A tibble: 23,460 x 9
+#>    state variable year     raw inf_adj inf_adj_perchild measurement_unit
 #>    <chr> <chr>    <chr>  <dbl>   <dbl>            <dbl> <chr>           
-#>  1 Alab… PK12ed   1997  3.27e6  4.67e6             3.93 PK12ed          
-#>  2 Alas… PK12ed   1997  1.04e6  1.49e6             7.55 PK12ed          
-#>  3 Ariz… PK12ed   1997  3.39e6  4.83e6             3.71 PK12ed          
-#>  4 Arka… PK12ed   1997  1.96e6  2.80e6             3.89 PK12ed          
-#>  5 Cali… PK12ed   1997  2.87e7  4.09e7             4.28 PK12ed          
-#>  6 Colo… PK12ed   1997  3.33e6  4.75e6             4.38 PK12ed          
-#>  7 Conn… PK12ed   1997  4.01e6  5.72e6             6.70 PK12ed          
-#>  8 Dela… PK12ed   1997  7.77e5  1.11e6             5.63 PK12ed          
-#>  9 Dist… PK12ed   1997  5.44e5  7.76e5             6.11 PK12ed          
-#> 10 Flor… PK12ed   1997  1.15e7  1.64e7             4.45 PK12ed          
-#> # … with 23,450 more rows, and 3 more variables: measurement_unit <chr>,
-#> #   allowed_values <chr>, description <chr>
+#>  1 Alab… PK12ed   1997  3.27e6  4.67e6             3.93 Numeric         
+#>  2 Alas… PK12ed   1997  1.04e6  1.49e6             7.55 Numeric         
+#>  3 Ariz… PK12ed   1997  3.39e6  4.83e6             3.71 Numeric         
+#>  4 Arka… PK12ed   1997  1.96e6  2.80e6             3.89 Numeric         
+#>  5 Cali… PK12ed   1997  2.87e7  4.09e7             4.28 Numeric         
+#>  6 Colo… PK12ed   1997  3.33e6  4.75e6             4.38 Numeric         
+#>  7 Conn… PK12ed   1997  4.01e6  5.72e6             6.70 Numeric         
+#>  8 Dela… PK12ed   1997  7.77e5  1.11e6             5.63 Numeric         
+#>  9 Dist… PK12ed   1997  5.44e5  7.76e5             6.11 Numeric         
+#> 10 Flor… PK12ed   1997  1.15e7  1.64e7             4.45 Numeric         
+#> # … with 23,450 more rows, and 2 more variables: allowed_values <chr>,
+#> #   description <chr>
 ```
 
 These are also presented in an easily-readable format in the
@@ -135,5 +135,5 @@ tidykids %>%
 ## Attribution
 
 The data was made available by and is attributable to Julia Isaacs,
-Eleanor Lauderback, and Erica Greenberg under the under the ODC
-Attribution License (<https://opendatacommons.org/licenses/by/1-0/>).
+Eleanor Lauderback, and Erica Greenberg under the under the \[ODC
+Attribution License\](<https://opendatacommons.org/licenses/by/1-0/>.

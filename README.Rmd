@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The not-for-profit organization the [Urban Institute](https://www.urban.org/) created an incredible dataset on State-by-State Spending on Kids that is available [here](https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset).  This data package provides this dataset through R. It is formatted as [tidy data](https://vita.had.co.nz/papers/tidy-data.pdf) to facilitate analysis within the [tidyverse](https://www.tidyverse.org/) suite of R packages.
+The not-for-profit organization the [Urban Institute](https://www.urban.org/) created an incredible dataset on State-by-State Spending on Kids that is available [here](https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset). This data package provides this dataset through R. It is formatted as [tidy data](https://vita.had.co.nz/papers/tidy-data.pdf) to facilitate analysis within the [tidyverse](https://www.tidyverse.org/) suite of R packages.
 
 ## Installation
 
@@ -51,7 +51,7 @@ To see descriptions of the variables (also available [here](https://datacatalog.
 ```{r}
 tidykids_data_dictionary
 ```
-This can be joined to the `tidykids` data to facilitate easily accessing information about the variables:
+This can be joined to the `tidykids` data to easily access information about the variables:
 
 ```{r}
 library(dplyr, warn.conflicts = FALSE)
