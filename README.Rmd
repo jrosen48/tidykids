@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# tidykids
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The Urban Institute created an incredible dataset on State-by-State Spending on Kids (availalble from https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset). This data package provides this dataset in a tidy format. The data was made available by and is attributable to Julia Isaacs, Eleanor Lauderback, and Erica Greenberg at the Urban Institute under the under the ODC Attribution License (https://opendatacommons.org/licenses/by/1-0/)
+
+## Installation
+
+You can install {tidykids} only from GitHub with:
+
+``` r
+remotes::install_github("jrosen48/tidykids)
+```
+
+## Example
+
+First, load the {tidykids} package:
+
+```{r example}
+library(tidykids)
+```
+
+Then, type `tidykids` to load the data:
+
+```{r}
+tidykids
+```
+
+To see descriptions of the variables (also available [here](https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx)), use the following function:
+
+```{r}
+data_dictionary()
+```
