@@ -25,7 +25,7 @@ The Urban Institute created an incredible dataset on State-by-State Spending on 
 You can install {tidykids} only from GitHub with:
 
 ``` r
-remotes::install_github("jrosen48/tidykids)
+remotes::install_github("jrosen48/tidykids")
 ```
 
 ## Example

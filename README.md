@@ -21,7 +21,7 @@ the ODC Attribution License
 You can install {tidykids} only from GitHub with:
 
 ``` r
-remotes::install_github("jrosen48/tidykids)
+remotes::install_github("jrosen48/tidykids")
 ```
 
 ## Example
