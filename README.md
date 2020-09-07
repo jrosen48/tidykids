@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidykids
+git \# tidykids
 
 <!-- badges: start -->
 
@@ -26,7 +26,7 @@ You can install {tidykids} only from GitHub with:
 remotes::install_github("jrosen48/tidykids")
 ```
 
-## Example
+## Use
 
 First, load the {tidykids} package:
 
