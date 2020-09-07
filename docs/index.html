@@ -137,19 +137,26 @@
 <span class="co">#&gt; 10 Education serv… edservs    Numeric          0-             Public spending o…</span>
 <span class="co">#&gt; # … with 59 more rows</span></pre></div>
 <p>These are also presented in an easily-readable format in the <a href="articles/tidykids-codebook.html">tidykids-codebook vignette</a>.</p>
-<p>The data can be easily visualized, e.g.:</p>
+</div>
+<div id="example" class="section level2">
+<h2 class="hasAnchor">
+<a href="#example" class="anchor"></a>Example</h2>
+<p>The data can be visualized, or prepared for use in other analyses.</p>
 <div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>, <span class="kw">warn.conflicts</span> <span class="kw">=</span> <span class="fl">FALSE</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
 
 <span class="no">tidykids</span> <span class="kw">%&gt;%</span>
-    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">variable</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"PK12ed_realperch"</span>, <span class="st">"highered_realperch"</span>),
-           <span class="no">state</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Tennessee"</span>, <span class="st">"Michigan"</span>, <span class="st">"North Carolina"</span>)) <span class="kw">%&gt;%</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">year</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">value</span>, <span class="kw">color</span> <span class="kw">=</span> <span class="no">state</span>, <span class="kw">group</span> <span class="kw">=</span> <span class="no">state</span>)) +
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>() +
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>() +
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span>(<span class="kw">axis.text.x</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span>(<span class="kw">angle</span> <span class="kw">=</span> <span class="fl">90</span>, <span class="kw">vjust</span> <span class="kw">=</span> <span class="fl">0.5</span>, <span class="kw">hjust</span><span class="kw">=</span><span class="fl">1</span>)) +
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span>(~<span class="no">variable</span>) +
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span>(<span class="st">"Elem. and secondary education and higher education expenditures per child"</span>)</pre></div>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">variable</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"PK12ed_realperch"</span>),
+         <span class="no">state</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Alabama"</span>, <span class="st">"Florida"</span>, <span class="st">"Georgia"</span>, <span class="st">"Mississippi"</span>, <span class="st">"North Carolina"</span>, <span class="st">"South Carolina"</span>, <span class="st">"Tennessee"</span>, <span class="st">"Virginia"</span>)) <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">year</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">value</span>, <span class="kw">color</span> <span class="kw">=</span> <span class="no">state</span>, <span class="kw">group</span> <span class="kw">=</span> <span class="no">state</span>)) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>() +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>() +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span>(<span class="kw">axis.text.x</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span>(<span class="kw">angle</span> <span class="kw">=</span> <span class="fl">90</span>, <span class="kw">vjust</span> <span class="kw">=</span> <span class="fl">0.5</span>, <span class="kw">hjust</span><span class="kw">=</span><span class="fl">1</span>)) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_color_brewer</a></span>(<span class="kw">type</span> <span class="kw">=</span> <span class="st">"qual"</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="kw">NULL</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"$1,000s"</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">title</span> <span class="kw">=</span> <span class="st">"Elem. and secondary education expenditures per child"</span>,
+       <span class="kw">subtitle</span> <span class="kw">=</span> <span class="st">"For select states in the Southeastern United States"</span>)</pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-4-1.png" width="100%"></p>
 </div>
 </div>

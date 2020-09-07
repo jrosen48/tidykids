@@ -81,21 +81,26 @@ tidykids_data_dictionary
 These are also presented in an easily-readable format in the
 [tidykids-codebook vignette](articles/tidykids-codebook.html).
 
-The data can be easily visualized, e.g.:
+## Example
+
+The data can be visualized, or prepared for use in other analyses.
 
 ``` r
 library(dplyr, warn.conflicts = FALSE)
 library(ggplot2)
 
 tidykids %>% 
-    filter(variable %in% c("PK12ed_realperch", "highered_realperch"),
-           state %in% c("Tennessee", "Michigan", "North Carolina")) %>% 
-    ggplot(aes(x = year, y = value, color = state, group = state)) +
-    geom_point() +
-    geom_line() +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
-    facet_wrap(~variable) +
-    ggtitle("Elem. and secondary education and higher education expenditures per child")
+  filter(variable %in% c("PK12ed_realperch"),
+         state %in% c("Alabama", "Florida", "Georgia", "Mississippi", "North Carolina", "South Carolina", "Tennessee", "Virginia")) %>%
+  ggplot(aes(x = year, y = value, color = state, group = state)) +
+  geom_point() +
+  geom_line() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  scale_color_brewer(type = "qual") +
+  xlab(NULL) +
+  ylab("$1,000s") +
+  labs(title = "Elem. and secondary education expenditures per child",
+       subtitle = "For select states in the Southeastern United States") 
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
