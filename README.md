@@ -11,15 +11,10 @@ The not-for-profit organization the [Urban
 Institute](https://www.urban.org/) created an incredible dataset on
 State-by-State Spending on Kids that is available
 [here](https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset).
-
 This data package provides this dataset through R. It is formatted as
 [tidy data](https://vita.had.co.nz/papers/tidy-data.pdf) to facilitate
 analysis within the [tidyverse](https://www.tidyverse.org/) suite of R
 packages.
-
-The data was made available by and is attributable to Julia Isaacs,
-Eleanor Lauderback, and Erica Greenberg under the under the ODC
-Attribution License (<https://opendatacommons.org/licenses/by/1-0/>).
 
 ## Installation
 
@@ -83,7 +78,7 @@ These are also presented in an easily-readable format in the
 
 ## Example
 
-The data can be visualized, or prepared for use in other analyses.
+The data can prepared for other analyses or be visualized, as below:
 
 ``` r
 library(dplyr, warn.conflicts = FALSE)
@@ -104,3 +99,9 @@ tidykids %>%
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+
+## Attribution
+
+The data was made available by and is attributable to Julia Isaacs,
+Eleanor Lauderback, and Erica Greenberg under the under the ODC
+Attribution License (<https://opendatacommons.org/licenses/by/1-0/>).
