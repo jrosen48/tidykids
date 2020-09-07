@@ -52,4 +52,4 @@ To see descriptions of the variables (also available [here](https://datacatalog.
 tidykids_data_dictionary
 ```
 
-These are also presented in an easily-readable format in the [tidykids-codebook vignette](tidykids-codebook.html).
+These are also presented in an easily-readable format in the [tidykids-codebook vignette](articles/tidykids-codebook.html).

@@ -79,4 +79,4 @@ tidykids_data_dictionary
 ```
 
 These are also presented in an easily-readable format in the
-[tidykids-codebook vignette](doc/tidykids-codebook.html).
+[tidykids-codebook vignette](articles/tidykids-codebook.html).
