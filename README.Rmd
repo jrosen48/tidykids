@@ -18,11 +18,11 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The Urban Institute created an incredible dataset on State-by-State Spending on Kids (availalble from https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset). 
+The not-for-profit organization the [Urban Institute](https://www.urban.org/) created an incredible dataset on State-by-State Spending on Kids that is available [here](https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset). 
 
-This data package provides this dataset in a tidy format. 
+This data package provides this dataset through R. It is formatted as [tidy data](https://vita.had.co.nz/papers/tidy-data.pdf) to facilitate analysis within the [tidyverse](https://www.tidyverse.org/) suite of R packages.
 
-The data was made available by and is attributable to Julia Isaacs, Eleanor Lauderback, and Erica Greenberg at the Urban Institute under the under the ODC Attribution License (https://opendatacommons.org/licenses/by/1-0/)
+The data was made available by and is attributable to Julia Isaacs, Eleanor Lauderback, and Erica Greenberg under the under the ODC Attribution License (https://opendatacommons.org/licenses/by/1-0/).
 
 ## Installation
 
