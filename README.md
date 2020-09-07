@@ -10,10 +10,12 @@
 The Urban Institute created an incredible dataset on State-by-State
 Spending on Kids (availalble from
 <https://datacatalog.urban.org/dataset/state-state-spending-kids-dataset>).
-This data package provides this dataset in a tidy format. The data was
-made available by and is attributable to Julia Isaacs, Eleanor
-Lauderback, and Erica Greenberg at the Urban Institute under the under
-the ODC Attribution License
+
+This data package provides this dataset in a tidy format.
+
+The data was made available by and is attributable to Julia Isaacs,
+Eleanor Lauderback, and Erica Greenberg at the Urban Institute under the
+under the ODC Attribution License
 (<https://opendatacommons.org/licenses/by/1-0/>)
 
 ## Installation
