@@ -51,6 +51,14 @@ To see descriptions of the variables (also available [here](https://datacatalog.
 ```{r}
 tidykids_data_dictionary
 ```
+This can be joined to the `tidykids` data to facilitate easily accessing information about the variables:
+
+```{r}
+library(dplyr, warn.conflicts = FALSE)
+
+tidykids %>% 
+  left_join(tidykids_data_dictionary)
+```
 
 These are also presented in an easily-readable format in the [tidykids-codebook vignette](articles/tidykids-codebook.html).
 

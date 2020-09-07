@@ -79,6 +79,32 @@ tidykids_data_dictionary
 #> # … with 59 more rows
 ```
 
+This can be joined to the `tidykids` data to facilitate easily accessing
+information about the variables:
+
+``` r
+library(dplyr, warn.conflicts = FALSE)
+
+tidykids %>% 
+  left_join(tidykids_data_dictionary)
+#> Joining, by = "variable"
+#> # A tibble: 23,460 x 10
+#>    state variable year     raw inf_adj inf_adj_perchild variable_catego…
+#>    <chr> <chr>    <chr>  <dbl>   <dbl>            <dbl> <chr>           
+#>  1 Alab… PK12ed   1997  3.27e6  4.67e6             3.93 Elementary and …
+#>  2 Alas… PK12ed   1997  1.04e6  1.49e6             7.55 Elementary and …
+#>  3 Ariz… PK12ed   1997  3.39e6  4.83e6             3.71 Elementary and …
+#>  4 Arka… PK12ed   1997  1.96e6  2.80e6             3.89 Elementary and …
+#>  5 Cali… PK12ed   1997  2.87e7  4.09e7             4.28 Elementary and …
+#>  6 Colo… PK12ed   1997  3.33e6  4.75e6             4.38 Elementary and …
+#>  7 Conn… PK12ed   1997  4.01e6  5.72e6             6.70 Elementary and …
+#>  8 Dela… PK12ed   1997  7.77e5  1.11e6             5.63 Elementary and …
+#>  9 Dist… PK12ed   1997  5.44e5  7.76e5             6.11 Elementary and …
+#> 10 Flor… PK12ed   1997  1.15e7  1.64e7             4.45 Elementary and …
+#> # … with 23,450 more rows, and 3 more variables: measurement_unit <chr>,
+#> #   allowed_values <chr>, description <chr>
+```
+
 These are also presented in an easily-readable format in the
 [tidykids-codebook vignette](articles/tidykids-codebook.html).
 
@@ -104,7 +130,7 @@ tidykids %>%
        subtitle = "For select states in the Southeastern United States") 
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
 ## Attribution
 

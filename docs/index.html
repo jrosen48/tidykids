@@ -142,13 +142,34 @@
 <span class="co">#&gt;  9 Education subsidies… edsubs_… Numeric          0-             Public spendin…</span>
 <span class="co">#&gt; 10 Education services … edservs  Numeric          0-             Public spendin…</span>
 <span class="co">#&gt; # … with 59 more rows</span></pre></div>
+<p>This can be joined to the <code>tidykids</code> data to facilitate easily accessing information about the variables:</p>
+<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>, <span class="kw">warn.conflicts</span> <span class="kw">=</span> <span class="fl">FALSE</span>)
+
+<span class="no">tidykids</span> <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">tidykids_data_dictionary</span>)
+<span class="co">#&gt; Joining, by = "variable"</span>
+<span class="co">#&gt; # A tibble: 23,460 x 10</span>
+<span class="co">#&gt;    state variable year     raw inf_adj inf_adj_perchild variable_catego…</span>
+<span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;dbl&gt;   &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;           </span>
+<span class="co">#&gt;  1 Alab… PK12ed   1997  3.27e6  4.67e6             3.93 Elementary and …</span>
+<span class="co">#&gt;  2 Alas… PK12ed   1997  1.04e6  1.49e6             7.55 Elementary and …</span>
+<span class="co">#&gt;  3 Ariz… PK12ed   1997  3.39e6  4.83e6             3.71 Elementary and …</span>
+<span class="co">#&gt;  4 Arka… PK12ed   1997  1.96e6  2.80e6             3.89 Elementary and …</span>
+<span class="co">#&gt;  5 Cali… PK12ed   1997  2.87e7  4.09e7             4.28 Elementary and …</span>
+<span class="co">#&gt;  6 Colo… PK12ed   1997  3.33e6  4.75e6             4.38 Elementary and …</span>
+<span class="co">#&gt;  7 Conn… PK12ed   1997  4.01e6  5.72e6             6.70 Elementary and …</span>
+<span class="co">#&gt;  8 Dela… PK12ed   1997  7.77e5  1.11e6             5.63 Elementary and …</span>
+<span class="co">#&gt;  9 Dist… PK12ed   1997  5.44e5  7.76e5             6.11 Elementary and …</span>
+<span class="co">#&gt; 10 Flor… PK12ed   1997  1.15e7  1.64e7             4.45 Elementary and …</span>
+<span class="co">#&gt; # … with 23,450 more rows, and 3 more variables: measurement_unit &lt;chr&gt;,</span>
+<span class="co">#&gt; #   allowed_values &lt;chr&gt;, description &lt;chr&gt;</span></pre></div>
 <p>These are also presented in an easily-readable format in the <a href="articles/tidykids-codebook.html">tidykids-codebook vignette</a>.</p>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>The data can prepared for other analyses or be visualized, as below:</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>, <span class="kw">warn.conflicts</span> <span class="kw">=</span> <span class="fl">FALSE</span>)
+<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>, <span class="kw">warn.conflicts</span> <span class="kw">=</span> <span class="fl">FALSE</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
 
 <span class="no">tidykids</span> <span class="kw">%&gt;%</span>
@@ -163,7 +184,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"$1000s"</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">title</span> <span class="kw">=</span> <span class="st">"Elem. and secondary education expenditures per child"</span>,
        <span class="kw">subtitle</span> <span class="kw">=</span> <span class="st">"For select states in the Southeastern United States"</span>)</pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-4-1.png" width="100%"></p>
+<p><img src="reference/figures/README-unnamed-chunk-5-1.png" width="100%"></p>
 </div>
 <div id="attribution" class="section level2">
 <h2 class="hasAnchor">
