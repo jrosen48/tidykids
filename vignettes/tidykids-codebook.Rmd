@@ -1,0 +1,24 @@
+---
+title: "tidykids-codebook"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{tidykids-codebook}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tidykids)
+```
+
+```{r}
+library(DT)
+datatable(tidykids_data_dictionary, options = list(pageLength = 35))
+```

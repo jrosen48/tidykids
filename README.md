@@ -77,3 +77,6 @@ tidykids_data_dictionary
 #> 10 Education serv… edservs    Numeric          0-             Public spending o…
 #> # … with 59 more rows
 ```
+
+These are also presented in an easily-readable format in the
+[tidykids-codebook vignette](doc/tidykids-codebook.html).
