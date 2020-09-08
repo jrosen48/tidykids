@@ -10,7 +10,9 @@ A data frame with 70380 rows and 4 variables:
 \item{state}{United States state (and the District of Columbia), a string}
 \item{variable}{Variable, see tidykids_data_dictionary for more information, a string}
 \item{year}{year, an integer}
-\item{value}{the value of the variable; a numeric value}
+\item{raw}{the value of the variable; a numeric value}
+\item{inf_adj}{the value of the variable, adjusted for inflation, a numeric value}
+\item{inf_adj_perchild}{the value of the variable adjusted for inflation, per child; a numeric value}
 }
 }
 \source{
