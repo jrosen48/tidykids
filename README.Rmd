@@ -84,6 +84,10 @@ tidykids %>%
        subtitle = "For select states in the Southeastern United States") 
 ```
 
+## Shiny 
+
+An interactive Shiny web application is available here: https://t.co/wBPq65xM5F?amp=1
+
 ## Attribution
 
 The data was made available by and is attributable to Julia Isaacs, Eleanor Lauderback, and Erica Greenberg under the under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/.

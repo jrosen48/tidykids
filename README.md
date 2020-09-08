@@ -132,6 +132,11 @@ tidykids %>%
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
+## Shiny
+
+An interactive Shiny web application is available here:
+<https://t.co/wBPq65xM5F?amp=1>
+
 ## Attribution
 
 The data was made available by and is attributable to Julia Isaacs,
