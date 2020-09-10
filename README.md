@@ -59,26 +59,7 @@ tidykids
     dollars for each year per child in $1000s
 
 To see descriptions of the variables (also available
-[here](https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx)):
-
-``` r
-tidykids_data_dictionary
-#> # A tibble: 23 x 4
-#>    variable   measurement_unit allowed_values description                       
-#>    <chr>      <chr>            <chr>          <chr>                             
-#>  1 PK12ed     Numeric          0-             Public spending on elementary and…
-#>  2 highered   Numeric          0-             Public spending on higher educati…
-#>  3 edsubs     Numeric          0-             Public spending on education subs…
-#>  4 edservs    Numeric          0-             Public spending on education spec…
-#>  5 pell       Numeric          0-             Public spending on Pell Grants by…
-#>  6 HeadStart… Numeric          0-             Federal spending on Head Start aw…
-#>  7 TANFbasic  Numeric          -21820-        Public spending on TANF cash assi…
-#>  8 othercash… Numeric          0-             Public spending on other cash ass…
-#>  9 SNAP       Numeric          0-             Public spending on SNAP benefit p…
-#> 10 socsec     Numeric          0-             Public spending on Social Securit…
-#> # … with 13 more rows
-```
-
+[here](https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx)).
 These are also presented in an easily-readable format in the
 [tidykids-codebook vignette](articles/tidykids-codebook.html).
 
@@ -104,7 +85,7 @@ tidykids %>%
        subtitle = "For select states in the Southeastern United States") 
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 ## Shiny
 

@@ -14,11 +14,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(tidykids)
-```
-
-```{r}
+```{r, echo = FALSE}
+library(readxl)
 library(DT)
+tidykids_data_dictionary <- read_excel('../data-raw/State-by-State Spending on Kids Data Dictionary File_0.xlsx')
 datatable(tidykids_data_dictionary, options = list(pageLength = 35))
 ```
