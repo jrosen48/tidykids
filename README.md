@@ -52,16 +52,20 @@ tidykids
 #> # … with 23,450 more rows
 ```
 
-  - `raw` refers to the raw amount
-  - `inf_adj` refers to the amount transformed to be in 2016 dollars for
-    each year
-  - `inf_adj_per_child` refers to the amount transformed to be in 2016
-    dollars for each year per child in $1000s
+Note that:
 
-To see descriptions of the variables (also available
-[here](https://datacatalog.urban.org/sites/default/files/data-dictionary-files/State-by-State%20Spending%20on%20Kids%20Data%20Dictionary%20File_0.xlsx)).
-These are also presented in an easily-readable format in the
-[tidykids-codebook vignette](articles/tidykids-codebook.html).
+  - `state` refers to the United States state (including the District of
+    Columbia)
+  - `year` refers to the year
+  - `raw` refers to the raw amount spent
+  - `inf_adj` refers to the amount transformed to be in 2016 dollars for
+    each year spent
+  - `inf_adj_per_child` refers to the amount transformed to be in 2016
+    dollars for each year per child in $1000s spent
+
+Detailed descriptions of the variables in the dataset (see the
+`variable` column) are available in the [tidykids-codebook
+vignette](articles/tidykids-codebook.html).
 
 ## Example
 
