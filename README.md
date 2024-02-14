@@ -4,7 +4,6 @@
 # tidykids
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 The not-for-profit organization the [Urban
@@ -36,7 +35,7 @@ Then, type `tidykids` to load the data:
 
 ``` r
 tidykids
-#> # A tibble: 23,460 x 6
+#> # A tibble: 23,460 × 6
 #>    state                variable year       raw   inf_adj inf_adj_perchild
 #>    <chr>                <chr>    <chr>    <dbl>     <dbl>            <dbl>
 #>  1 Alabama              PK12ed   1997   3271969  4665308.             3.93
@@ -49,19 +48,19 @@ tidykids
 #>  8 Delaware             PK12ed   1997    776825  1107629.             5.63
 #>  9 District of Columbia PK12ed   1997    544051   775730.             6.11
 #> 10 Florida              PK12ed   1997  11498394 16394885              4.45
-#> # … with 23,450 more rows
+#> # ℹ 23,450 more rows
 ```
 
 Note that:
 
-  - `state` refers to the United States state (including the District of
-    Columbia)
-  - `year` refers to the year
-  - `raw` refers to the raw amount spent
-  - `inf_adj` refers to the amount transformed to be in 2016 dollars for
-    each year spent
-  - `inf_adj_per_child` refers to the amount transformed to be in 2016
-    dollars for each year per child in $1000s spent
+- `state` refers to the United States state (including the District of
+  Columbia)
+- `year` refers to the year
+- `raw` refers to the raw amount spent
+- `inf_adj` refers to the amount transformed to be in 2016 dollars for
+  each year spent
+- `inf_adj_per_child` refers to the amount transformed to be in 2016
+  dollars for each year per child in \$1000s spent
 
 Detailed descriptions of the variables in the dataset (see the
 `variable` column) are available in the [tidykids-codebook
