@@ -25,6 +25,6 @@ Detailed descriptions of the variables in the dataset (see the `variable` column
 ```{r, echo = FALSE}
 library(DT)
 library(readr)
-tidykids_data_dictionary <- read_csv('../data-raw/tidykids_data_dictionary.csv')
+tidykids_data_dictionary <- read_csv('tidykids_data_dictionary.csv')
 datatable(tidykids_data_dictionary, options = list(pageLength = 35))
 ```
