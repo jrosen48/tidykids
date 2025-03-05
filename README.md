@@ -63,7 +63,7 @@ Note that:
   dollars for each year per child in \$1000s spent
 
 Detailed descriptions of the variables in the dataset (see the
-`variable` column) are available in the [tidykids-codebook
+`expenditure` column) are available in the [tidykids-codebook
 vignette](articles/tidykids-codebook.html).
 
 ## Example
