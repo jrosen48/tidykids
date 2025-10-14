@@ -65,17 +65,14 @@ tidykids %>%
   ggplot(aes(x = year, y = inf_adj_perchild, color = state, group = state)) +
   geom_point() +
   geom_line() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=1)) +
   scale_color_brewer(type = "qual") +
   xlab(NULL) +
   ylab("$1000s") +
   labs(title = "Elem. and secondary education expenditures per child",
-       subtitle = "For select states in the Southeastern United States") 
+       subtitle = "For select states in the Southeastern United States") +
+  theme_bw()
 ```
-
-## Shiny 
-
-An interactive Shiny web application is available here: https://jmichaelrosenberg.shinyapps.io/tidykidsshiny/
 
 ## Attribution
 

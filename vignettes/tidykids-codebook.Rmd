@@ -18,13 +18,15 @@ knitr::opts_chunk$set(
 - `year` refers to the year
 - `raw` refers to the raw amount spent
 - `inf_adj` refers to the amount transformed to be in 2016 dollars for each year spent
-- `inf_adj_per_child` refers to the amount transformed to be in 2016 dollars for each year per child in $1000s spent
+- `inf_adj_per_child` refers to the amount transformed to be in 2016 dollars for each year per child
 
-Detailed descriptions of the variables in the dataset (see the `variable` column) are below. Note that the descriptions are for the `raw` amount spent; `int_adj` and `int_adj_per_child` are based upon that amount.
+**Note that the descriptions are for the `raw` amount spent; `int_adj` and `int_adj_per_child` are based upon that amount.**
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message = FALSE}
 library(DT)
 library(readr)
+library(dplyr)
 tidykids_data_dictionary <- read_csv('tidykids_data_dictionary.csv')
-datatable(tidykids_data_dictionary, options = list(pageLength = 35))
+tidykids_data_dictionary <- tidykids_data_dictionary %>% rename(Expenditure = `Variable name`)
+datatable(tidykids_data_dictionary, options = list(pageLength = 30))
 ```
