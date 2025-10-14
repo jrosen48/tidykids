@@ -49,7 +49,7 @@ Note that:
 - `inf_adj` refers to the amount transformed to be in 2016 dollars for each year spent
 - `inf_adj_per_child` refers to the amount transformed to be in 2016 dollars for each year per child in $1000s spent
 
-Detailed descriptions of the variables in the dataset (see the `variable` column) are available in the [tidykids-codebook vignette](articles/tidykids-codebook.html).
+Detailed descriptions of the expenditures in the dataset (see the `expenditure` column) are available in the [tidykids-codebook vignette](https://jrosen48.github.io/tidykids/articles/tidykids-codebook.html).
 
 ## Example
 
@@ -60,7 +60,7 @@ library(dplyr, warn.conflicts = FALSE)
 library(ggplot2)
 
 tidykids %>% 
-  filter(variable %in% c("PK12ed"),
+  filter(expenditure %in% c("PK12ed"),
          state %in% c("Alabama", "Florida", "Georgia", "Mississippi", "North Carolina", "South Carolina", "Tennessee", "Virginia")) %>%
   ggplot(aes(x = year, y = inf_adj_perchild, color = state, group = state)) +
   geom_point() +
