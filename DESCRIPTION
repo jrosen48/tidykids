@@ -2,15 +2,18 @@ Package: tidykids
 Title: State-by-State Spending on Kids Dataset from the Urban Institute in a Tidy Format
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Joshua",
-           family = "Rosenberg",
-           role = c("aut", "cre"),
-           email = "jmrosen48@gmail.com",
-           comment = c(ORCID = "0000-0003-2170-0447"))
-    person(given = "Kelly",
-           family = "Boles",
-           role = c("aut"),
-           email = "klboles@utk.edu")
+   c(
+        person(given = "Joshua",
+               family = "Rosenberg",
+               role = c("aut", "cre"),
+               email = "jmrosen48@gmail.com",
+               comment = c(ORCID = "0000-0003-2170-0447")),
+        person(given = "Kelly",
+               family = "Boles",
+               role = "ctb",
+               email: = "boleskellyl@gmail.com",
+               comment = c(ORCID = "0000-0001-7129-9546"))
+    )
 Description: 
     The Urban Institute created an incredible dataset on State-by-State Spending 
     on Kids (availalble from 
