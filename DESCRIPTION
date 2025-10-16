@@ -11,7 +11,7 @@ Authors@R:
         person(given = "Kelly",
                family = "Boles",
                role = "ctb",
-               email: = "boleskellyl@gmail.com",
+               email = "boleskellyl@gmail.com",
                comment = c(ORCID = "0000-0001-7129-9546"))
     )
 Description: 
