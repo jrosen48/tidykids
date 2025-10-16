@@ -60,7 +60,7 @@ Note that:
 - `inf_adj` refers to the amount transformed to be in 2016 dollars for
   each year spent
 - `inf_adj_per_child` refers to the amount transformed to be in 2016
-  dollars for each year per child in \$1000s spent
+  dollars for each year per child
 
 Detailed descriptions of the expenditures in the dataset (see the
 `expenditure` column) are available in the [tidykids-codebook
@@ -98,5 +98,5 @@ An interactive Shiny web application is available here:
 ## Attribution
 
 The data was made available by and is attributable to Julia Isaacs,
-Eleanor Lauderback, and Erica Greenberg under the under the \[ODC
-Attribution License\](<https://opendatacommons.org/licenses/by/1-0/>.
+Eleanor Lauderback, and Erica Greenberg under the under the [ODC
+Attribution License](<https://opendatacommons.org/licenses/by/1-0/>).
