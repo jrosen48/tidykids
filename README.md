@@ -98,5 +98,5 @@ An interactive Shiny web application is available here:
 ## Attribution
 
 The data was made available by and is attributable to Julia Isaacs,
-Eleanor Lauderback, and Erica Greenberg under the under the \[ODC
-Attribution License\](<https://opendatacommons.org/licenses/by/1-0/>).
+Eleanor Lauderback, and Erica Greenberg under the under the [ODC
+Attribution License](<https://opendatacommons.org/licenses/by/1-0/>).
